@@ -9,5 +9,6 @@ docker run -p 3306:3306 --name mysql \
 -v /mydata/mysql/config:/etc/mysql \
 -e MYSQL_ROOT_PASSWORD=root \
 -d mysql:5.7
+--character-set-server=utf8 --collation-server=utf8_unicode_ci
 ```
 
