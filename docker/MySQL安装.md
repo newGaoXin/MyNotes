@@ -22,6 +22,14 @@ docker exec -it 应用名称 /bin/bash
 exit
 ```
 
+设置容器自动启动：
+
+```shell
+docker update mysql --restart=always
+```
+
+
+
 
 
 ## 安装 MySQL 5.7
