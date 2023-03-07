@@ -170,7 +170,15 @@
 
 
 
-## 框架
+# 数据库
+
+## MySQL
+
+1.[自增ID不连续](./数据库/MySQL/自增ID不连续.md)
+
+
+
+# 框架
 
 ### Spring Boot 
 
@@ -214,6 +222,9 @@
 
 [Feign 请求头丢失问题](./Spring Cloud/Feign/Feign 请求头丢失问题.md)
 
+#### Feigin
+
+[Spring Cloud Stream](./Spring Cloud/Spring Cloud Stream/Spring Cloud Stream.md)
 
 
 ## 容器技术

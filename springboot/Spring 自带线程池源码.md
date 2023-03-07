@@ -161,16 +161,27 @@ public <T extends ThreadPoolTaskExecutor> T configure(T taskExecutor) {
 public class ThreadPoolTaskExecutor extends ExecutorConfigurationSupport
     implements AsyncListenableTaskExecutor, SchedulingTaskExecutor {
   
-    @Override
-    public void execute(Runnable task) {
-      Executor executor = getThreadPoolExecutor();
-      try {
-        executor.execute(task);
-      }
-      catch (RejectedExecutionException ex) {
-        throw new TaskRejectedException("Executor [" + executor + "] did not accept task: " + task, ex);
-      }
-    }
+	@Override
+	public Future<?> submit(Runnable task) {
+		ExecutorService executor = getThreadPoolExecutor();
+		try {
+			return executor.submit(task);
+		}
+		catch (RejectedExecutionException ex) {
+			throw new TaskRejectedException("Executor [" + executor + "] did not accept task: " + task, ex);
+		}
+	}
+
+	@Override
+	public <T> Future<T> submit(Callable<T> task) {
+		ExecutorService executor = getThreadPoolExecutor();
+		try {
+			return executor.submit(task);
+		}
+		catch (RejectedExecutionException ex) {
+			throw new TaskRejectedException("Executor [" + executor + "] did not accept task: " + task, ex);
+		}
+	}
 }
 ```
 

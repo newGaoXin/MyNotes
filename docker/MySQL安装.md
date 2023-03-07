@@ -64,3 +64,26 @@ skip-character-set-client-handshake
 skip-name-resolve
 ```
 
+
+
+## M1 安装
+
+拉去 mysql/mysql-server 下的镜像
+
+需要进入容器，修改权限，**不修改无法使用IP登陆**
+
+```shell
+docker exec -it mysql5.7 bash
+```
+
+```shell
+# 登陆mysql
+mysql -uroot -p 
+
+# 将root用户的Host 由 localhost 修改为 %
+update mysql.user set Host = '%' where User = 'root';
+
+# 刷新(刷新可以使用IP登陆，图形化界面登陆)
+flush privileges;
+```
+
