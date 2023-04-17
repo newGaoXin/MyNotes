@@ -176,6 +176,8 @@
 
 1.[自增ID不连续](./数据库/MySQL/自增ID不连续.md)
 
+2.[Mysql 自动 commit 模式下，插入数据不会立即 commit](./数据库/MySQL/Mysql 自动 commit 模式下，插入数据不会立即 commit.md)
+
 
 
 # 框架
