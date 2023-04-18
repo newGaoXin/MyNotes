@@ -178,7 +178,7 @@
 
 2.[Mysql 自动 commit 模式下，插入数据不会立即 commit](./数据库/MySQL/Mysql 自动 commit 模式下，插入数据不会立即 commit.md)
 
-
+3.[关于 mysql-connector-java jar包依赖 useSSL 配置版本变化](./数据库/MySQL/关于 mysql-connector-java jar包依赖 useSSL 配置版本变化.md)
 
 # 框架
 
